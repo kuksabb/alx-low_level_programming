@@ -4,8 +4,8 @@
 
 /**
  * main - assigns a random number to n
- * Executes and prints respective output
- * return: (0) if success
+ * Executes and number stored in variable n
+ * return: (0) (if success)
 */
 int main(void)
 {
