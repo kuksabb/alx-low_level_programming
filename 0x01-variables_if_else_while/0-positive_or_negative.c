@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * Prints 'is positive' if number is greater than 0
- * Prints 'is zero' if number is 0
- * Prints 'is negative' if number is less than 0
+ * Main - assigns a random number to n
+ * Executes and prints the number
+ * Returns: 0
 */
 
 int main(void)
@@ -16,15 +16,15 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf("is positive\n");
+		printf("%d is positive\n", n);
 	}
 	else if (n == 0)
 	{
-		printf("is zero\n");
+		printf("%d is zero\n", n);
 	}
 	else
 	{
-		printf("is negative");
+		printf("%d is negative\n", n);
 	}
 	return (0);
 }
