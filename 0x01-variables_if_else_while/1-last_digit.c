@@ -5,7 +5,7 @@
 /**
  * main - assigns a random number to n
  * Executes and prints respective output
- * return: 0 if success
+ * return: (0) if success
 */
 int main(void)
 {
@@ -16,11 +16,11 @@ int main(void)
 		printf("Last digit of %d is %d", n, n % 10);
 		if (n % 10 > 5)
 		{
-			printf(" and is greater than 5");
+			printf(" and is greater than 5\n");
 		}
 		else if (n % 10 == 0)
 		{
-			printf(" and is 0");
+			printf(" and is 0\n");
 		}
 		else if (n % 10 < 6 && n % 10 != 0)
 		{
