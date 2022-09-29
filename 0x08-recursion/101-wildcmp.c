@@ -7,7 +7,7 @@
  * @t6: first spot in wildcard comparison
  * Return: spot that matches or NULL
 */
-char test(char *s5, char *s6, char *t5, char *t6)
+char *test(char *s5, char *s6, char *t5, char *t6)
 {
 	if (*s6 == '*' || (*s5 == '\0' && *s6 == '\0'))
 	return (t5);
@@ -23,7 +23,7 @@ char test(char *s5, char *s6, char *t5, char *t6)
  * @s4: string to check
  * Return: pointer to spot in s3 that matches s4
 */
-char wildcard(char *s3, char *s4)
+char *wildcard(char *s3, char *s4)
 {
 	if (*s3 != *s4)
 	{
