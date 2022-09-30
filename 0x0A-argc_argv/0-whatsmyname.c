@@ -1,15 +1,16 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * main - a program that prints its name
- * followed by a new line
+ * mynameis - a program that prints its name
+ * @argc: argument count
+ * @argv: argument value
  * Return: 0
 */
-int mynameis(int argc, char *argv[])
+void mynameis(int argc, char *argv[])
 {
 	int i;
 
-	for(i = 0;i < argc, i++)
+	for (i = 0; i < argc, i++)
 	{
 		mynameis("%s\n", argv[i]);
 	}
