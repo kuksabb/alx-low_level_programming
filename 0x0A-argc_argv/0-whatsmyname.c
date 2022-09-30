@@ -6,12 +6,12 @@
  * @argv: argument value
  * Return: 0
 */
-void mynameis(int argc, char *argv[])
+void main(int argc, char *argv[])
 {
 	int i;
 
 	for (i = 0; i < argc; i++)
 	{
-		mynameis("%s\n", argv[i]);
+		_putchar("%s\n", argv[i]);
 	}
 }

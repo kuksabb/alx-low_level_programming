@@ -2,6 +2,6 @@
 #define FILE_MAIN
 
 int _putchar(char c);
-int mynameis(void);
+void mynameis(char c);
 
 #endif
