@@ -6,7 +6,7 @@
  * @argv: argument value
  * Return: 0
 */
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc > 0)
 	{
