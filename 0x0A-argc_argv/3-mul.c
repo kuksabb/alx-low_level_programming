@@ -9,17 +9,17 @@
 */
 int main(int argc, char *argv[])
 {
-	int i, a;
-	int result = i * a;
-
-	if (argc > 1)
+	int a = 0, b = 0;
+	
+	if (argc > 2)
 	{
-		printf("%d\n", result);
+		a = atoi(argv[1]);
+		b = atoi(argv[2]);
+		printf("%d\n", a * b);
 	}
-	else if (argc <= 1)
+	else
 	{
 		printf("Error\n");
 	}
-	return (1);
+	return (0);
 }
-
