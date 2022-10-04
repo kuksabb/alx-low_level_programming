@@ -4,7 +4,7 @@
 /**
  * _strdup - pointer to a duplicate string
  * @str: string to be duplicated
- * return: pointer to the duplicate string, null if string is empty or insuffient memory
+ * Return: pointer to the duplicate string or null
 */
 char *_strdup(char *str)
 {
@@ -14,7 +14,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	for (n = 0; str[n] != '\0'; i++)
+	for (n = 0; str[n] != '\0'; n++)
 		strnew = (char *)malloc(n + 1 * sizeof(char));
 	if (strnew != NULL)
 	{
