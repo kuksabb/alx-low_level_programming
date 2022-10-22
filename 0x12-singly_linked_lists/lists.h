@@ -2,18 +2,18 @@
 #define _LISTS_
 
 /**
- * struct list_s - singly linked list
+ * struct list_t - singly linked list
  * @str: string(malloc 'ed string)
  * @len: length of the string
  * @next: points to the next node
  *
  * Description: singly linked node structure for alx project
 */
-typedef struct list_s
+typedef struct list_t
 {
 	char *str;
 	unsigned int len;
-	struct list_s *next;
+	struct list_t *next;
 } list_t;
 
 int _putchar(char c);
