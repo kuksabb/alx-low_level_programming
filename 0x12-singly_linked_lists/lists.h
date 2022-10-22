@@ -9,12 +9,18 @@
  *
  * Description: singly linked node structure for alx project
 */
-typedef struct list_t
+typedef struct list_s
 {
 	char *str;
 	unsigned int len;
-	struct list_t *next;
+	struct list_s *next;
 } list_t;
+
+typedef struct size_t
+{
+	char *str;
+	unsigned int len;
+} size_t;
 
 int _putchar(char c);
 size_t print_list(const list_t *h);
