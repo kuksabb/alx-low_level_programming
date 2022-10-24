@@ -1,8 +1,8 @@
 #include "lists.h"
 #include <stdio.h>
 /**
- * print_list - prints all elements of a listint_t list
- * @h: const pointer of structure list_t
+ * print_listint - prints all elements of a listint_t list
+ * @h: const pointer of structure listint_t
  * Return: number of nodes
 */
 size_t print_listint(const listint_t *h)
@@ -11,10 +11,10 @@ size_t print_listint(const listint_t *h)
 
 	while (h != NULL)
 	{
-		if (h->str == NULL)
+		if (h->n == NULL)
 			printf("[0] (nil)\n");
 		else
-			printf("[%d] %s\n", h->len, h->str);
+			printf("[%d] %s\n", h->len, h->n);
 		h = h->next;
 		i++;
 	}
