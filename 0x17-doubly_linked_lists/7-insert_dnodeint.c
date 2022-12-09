@@ -10,30 +10,44 @@
 */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *tmp = *h, *new;
-
-	if (idx == 0)
-		return (add_dnodeint(h, n));
-
-	for (; idx != 1; idx--)
-	{
-		tmp = tmp->next;
-		if (tmp == NULL)
-			return (NULL);
-	}
-
-	if (tmp->next == NULL)
-		return (add_dnodeint_end(h, n));
+	unsigned int count = 1;
+	dlistint_t *temp = NULL, *new = NULL;
 
 	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
+	if (new == NULL || h == NULL)
 		return (NULL);
-
 	new->n = n;
-	new->prev = tmp;
-	new->next = tmp->next;
-	tmp->next->prev = new;
-	tmp->next = new;
-
+	temp = *h;
+	if (idx == 0)
+	{
+		*h = new;
+		new->next = temp;
+		new->prev = NULL;
+		temp->prev = new;
+		return (new);
+	}
+	while (temp->next != NULL)
+	{
+		if (count == idx) /* found back */
+		{
+			new->prev = temp; /* current prev to back link */
+			new->next = temp->next; /* current next to front link*/
+			temp->next = new; /* back next link */
+			new->next->prev = new; /* from prev link */
+		}
+		temp = temp->next;
+		count++;
+	}
+	if (count == idx) /* end of DLL */
+	{
+		new->prev = temp; /* current prev to back link */
+		new->next = NULL; /* current next to NULL*/
+		temp->next = new; /* back next link */
+	}
+	if (count < idx)
+	{
+		free(new);
+		return (NULL);
+	}
 	return (new);
 }
